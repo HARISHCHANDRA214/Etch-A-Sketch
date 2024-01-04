@@ -1,0 +1,142 @@
+.header{
+    font-size: 3rem;
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+.wrapper{
+    display: flex;
+}
+.options, #container{
+    box-shadow: 10px 25px 30px 0px gray;
+    height: 70%;
+    width: 40%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;   
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.options{
+    background-color: rgb(197, 196, 196);
+    width: 20%;
+    margin-left: 5%;
+    align-items: center;
+    justify-content: space-around;
+}
+#buttonsWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    width: 80%;
+}
+.buttons, .rangeDisplay, .clearButton{
+    font-size: 1.2rem;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 50%;
+}
+.divRange{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rangeDisplay{
+    border: 0px;
+}
+.buttons:hover{
+    background-color: rgb(56, 56, 56);
+}
+#showColor{
+    margin-top: 20px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    display: inline-block;
+    box-shadow: 5px 10px 20px 0px gray;
+}
+#color{
+    display: none;
+}
+#rows{
+    display: flex;
+    flex: 1;
+}
+#columns{
+    flex: 1;
+}
+#columns:hover, .buttons, .clearButton{
+    cursor: default;
+}
+/********** Range Input Styles **********/
+/*Range Reset*/
+input[type="range"] {
+    -webkit-appearance: none;
+     appearance: none;
+     background: transparent;
+     cursor: pointer;
+     width: 11rem;
+ }
+ 
+ /* Removes default focus */
+ input[type="range"]:focus {
+   outline: none;
+ }
+ 
+ /***** Chrome, Safari, Opera and Edge Chromium styles *****/
+ /* slider track */
+ input[type="range"]::-webkit-slider-runnable-track {
+    background-color: rgb(56, 56, 56);
+    border-radius: 0.5rem;
+    height: 0.5rem;  
+ }
+ 
+ /* slider thumb */
+ input[type="range"]::-webkit-slider-thumb {
+   -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -12px; /* Centers thumb on the track */
+ 
+    /*custom styles*/
+    background-color: black;
+    height: 2rem;
+    width: 1rem;
+ }
+ 
+ input[type="range"]:focus::-webkit-slider-thumb {   
+   border: 1px solid black;
+   outline: 3px solid black;
+   outline-offset: 0.125rem; 
+ }
+ 
+ /******** Firefox styles ********/
+ /* slider track */
+ input[type="range"]::-moz-range-track {
+    background-color: rgb(56, 56, 56);
+    border-radius: 0.5rem;
+    height: 0.5rem;
+ }
+ 
+ /* slider thumb */
+ input[type="range"]::-moz-range-thumb {
+    border: none; /*Removes extra border that FF applies*/
+    border-radius: 0; /*Removes default border-radius that FF applies*/
+ 
+    /*custom styles*/
+    background-color: rgb(56, 56, 56);
+    height: 2rem;
+    width: 1rem;
+ }
+ 
+ input[type="range"]:focus::-moz-range-thumb {
+   border: 1px solid black;
+   outline: 3px solid black;
+   outline-offset: 0.125rem; 
+ }

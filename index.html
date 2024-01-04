@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="header">Etch-A-Sketch</div>
+    <div id="wrapperId" class="wrapper">
+        <div class="options">
+            <div class="divColor">
+                <input onchange="changeColor()" id="color" type="color">
+                <span id="showColor"></span>
+            </div>
+            <div id="buttonsWrapper">
+                <div id="1" class="buttons" onclick="selectMode(this)">Color mode</div>
+                <div id="2" class="buttons" onclick="selectMode(this)">Rainbow mode</div>
+                <div id="3" class="buttons" onclick="selectMode(this)">10 Steps</div>
+                <div id="4" class="buttons" onclick="selectMode(this)">Eraser</div>
+                <div id="5" class="clearButton" onclick="selectMode(this)">Clear</div>
+            </div>
+            <div class="divRange">
+                <input id="range" type="range">
+                <div id="rangeValue" class="rangeDisplay">50x50</div>
+            </div>
+        </div>
+        <div id="container"></div>
+    </div>
+</body>
+</html>
