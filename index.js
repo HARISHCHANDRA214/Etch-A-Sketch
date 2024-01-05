@@ -4,6 +4,7 @@ const showColor=document.querySelector("#showColor");
 const range=document.querySelector("#range");
 const container=document.getElementById("container");
 
+let isDrawing=false;
 let isSteps=false;
 let isRainbowMode=false;
 let max=255;
@@ -13,6 +14,7 @@ let id="1";
 let number=50;
 let stepsColor=100;
 let colorValue="#000000";
+
 document.getElementById(id).style.background="rgb(56, 56, 56)";
 showColor.style.background=colorValue;
 createGrid();
@@ -22,7 +24,11 @@ range.addEventListener("click",(event)=>{
     document.querySelector("#container").innerHTML="";
     createGrid();
 })
+
+container.addEventListener("mousedown", ()=>{isDrawing=true;})
+container.addEventListener("mouseup",()=>{isDrawing=false});
 container.addEventListener("mouseover",(event)=>{
+    if(!isDrawing){return;}
     if(isRainbowMode){
         event.target.style.background="rgb("+(Math.random()*(max-min)+min)+", "+(Math.random()*(max-min)+min)+", "+(Math.random()*(max-min)+min)+")";
     }else if(isSteps){
